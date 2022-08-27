@@ -159,6 +159,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="billTextField" destination="UUN-xY-jvm" id="7t1-e9-ehf"/>
                         <outlet property="splitNumberLabel" destination="v2T-ov-sed" id="AhF-s2-HN2"/>
                     </connections>
                 </viewController>
