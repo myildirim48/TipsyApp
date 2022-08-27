@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Calculator View Controller,-->
+        <!--Calculator View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="CalculatorViewController," customModule="TipsyApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="CalculatorViewController" customModule="TipsyApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -32,33 +32,40 @@
                                                 <rect key="frame" x="0.0" y="40" width="374" height="29"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zYI-fF-vYz">
-                                                        <rect key="frame" x="0.0" y="0.0" width="107.5" height="29"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="104.5" height="29"/>
                                                         <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" title="%0">
+                                                        <buttonConfiguration key="configuration" style="plain" title="0%">
                                                             <backgroundConfiguration key="background" cornerRadius="25"/>
-                                                            <fontDescription key="titleFontDescription" type="system" pointSize="35"/>
+                                                            <fontDescription key="titleFontDescription" type="system" pointSize="33"/>
                                                             <color key="baseForegroundColor" systemColor="systemTealColor"/>
                                                         </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="tipChanged:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jmE-h5-BQH"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xlJ-Gu-ngb">
-                                                        <rect key="frame" x="107.5" y="0.0" width="159" height="29"/>
+                                                        <rect key="frame" x="104.5" y="0.0" width="165" height="29"/>
                                                         <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" title="%10" cornerStyle="dynamic">
-                                                            <backgroundConfiguration key="background" cornerRadius="25">
-                                                                <color key="backgroundColor" red="0.22745098039215686" green="0.32941176470588235" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            </backgroundConfiguration>
-                                                            <fontDescription key="titleFontDescription" type="system" pointSize="35"/>
-                                                            <color key="baseForegroundColor" systemColor="systemTealColor"/>
-                                                        </buttonConfiguration>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ont-gZ-fIn">
-                                                        <rect key="frame" x="266.5" y="0.0" width="107.5" height="29"/>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" title="%20">
+                                                        <buttonConfiguration key="configuration" style="plain" title="10%" cornerStyle="dynamic">
                                                             <backgroundConfiguration key="background" cornerRadius="25"/>
                                                             <fontDescription key="titleFontDescription" type="system" pointSize="35"/>
                                                             <color key="baseForegroundColor" systemColor="systemTealColor"/>
                                                         </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="tipChanged:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eqJ-eT-d7K"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ont-gZ-fIn">
+                                                        <rect key="frame" x="269.5" y="0.0" width="104.5" height="29"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="20%">
+                                                            <backgroundConfiguration key="background" cornerRadius="25"/>
+                                                            <fontDescription key="titleFontDescription" type="system" pointSize="35"/>
+                                                            <color key="baseForegroundColor" systemColor="systemTealColor"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="tipChanged:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mic-5w-1yf"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <constraints>
@@ -90,6 +97,9 @@
                                                             <constraint firstAttribute="height" constant="29" id="7dT-2Z-OTu"/>
                                                             <constraint firstAttribute="width" constant="94" id="v5g-55-GAu"/>
                                                         </constraints>
+                                                        <connections>
+                                                            <action selector="stepperValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="7VD-F2-H72"/>
+                                                        </connections>
                                                     </stepper>
                                                 </subviews>
                                             </stackView>
@@ -142,6 +152,9 @@
                                     <fontDescription key="titleFontDescription" type="system" pointSize="35"/>
                                     <color key="baseForegroundColor" systemColor="systemTealColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="calculateBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gwO-3i-clq"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -160,19 +173,23 @@
                     </view>
                     <connections>
                         <outlet property="billTextField" destination="UUN-xY-jvm" id="7t1-e9-ehf"/>
-                        <outlet property="splitNumberLabel" destination="v2T-ov-sed" id="AhF-s2-HN2"/>
+                        <outlet property="splitNumberLabel" destination="v2T-ov-sed" id="gTS-UK-JK5"/>
+                        <outlet property="tenPctBtn" destination="xlJ-Gu-ngb" id="l7p-EN-P6l"/>
+                        <outlet property="twentyPctBtn" destination="ont-gZ-fIn" id="gas-Mn-vUW"/>
+                        <outlet property="zeroPctBtn" destination="zYI-fF-vYz" id="E4g-bo-NsX"/>
+                        <segue destination="3GO-ka-Q9b" kind="presentation" identifier="goToResult" id="l7u-f3-3gs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="34.782608695652179" y="93.75"/>
         </scene>
-        <!--View Controller-->
+        <!--Result View Controller-->
         <scene sceneID="H0q-Q1-na3">
             <objects>
-                <viewController id="3GO-ka-Q9b" sceneMemberID="viewController">
+                <viewController id="3GO-ka-Q9b" customClass="ResultViewController" customModule="TipsyApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Fhd-bv-3YW">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XZy-va-ie8">
@@ -209,7 +226,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q5g-l9-Vs2">
-                                <rect key="frame" x="103" y="822" width="208" height="40"/>
+                                <rect key="frame" x="103" y="802" width="208" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="nQv-yP-h4x"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="208" id="z9m-id-Krq"/>
@@ -222,6 +239,9 @@
                                     <fontDescription key="titleFontDescription" type="system" pointSize="35"/>
                                     <color key="baseForegroundColor" systemColor="systemTealColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="recalculateBtnPressed:" destination="3GO-ka-Q9b" eventType="touchUpInside" id="yP4-7k-IYg"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Split between 2 people, %10 tip" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tpS-6E-HS9">
                                 <rect key="frame" x="10" y="305" width="404" height="76.5"/>
@@ -247,6 +267,10 @@
                             <constraint firstItem="XZy-va-ie8" firstAttribute="leading" secondItem="Fhd-bv-3YW" secondAttribute="leading" id="g14-HK-q3L"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="billLabel" destination="lX3-az-0Bc" id="JuK-Kc-haC"/>
+                        <outlet property="resultLabel" destination="tpS-6E-HS9" id="uej-Lr-TwQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SwY-Dy-Eg5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -12,6 +12,8 @@
 		74D611DC28B95A1000607D12 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74D611DA28B95A1000607D12 /* Main.storyboard */; };
 		74D611DE28B95A1000607D12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74D611DD28B95A1000607D12 /* Assets.xcassets */; };
 		74D611E128B95A1000607D12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74D611DF28B95A1000607D12 /* LaunchScreen.storyboard */; };
+		74D611EB28BABB9900607D12 /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D611EA28BABB9900607D12 /* CalculatorViewController.swift */; };
+		74D611ED28BABD5500607D12 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D611EC28BABD5500607D12 /* ResultViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		74D611DD28B95A1000607D12 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		74D611E028B95A1000607D12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		74D611E228B95A1000607D12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		74D611EA28BABB9900607D12 /* CalculatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
+		74D611EC28BABD5500607D12 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,8 @@
 		74D611D328B95A1000607D12 /* TipsyApp */ = {
 			isa = PBXGroup;
 			children = (
+				74D611EA28BABB9900607D12 /* CalculatorViewController.swift */,
+				74D611EC28BABD5500607D12 /* ResultViewController.swift */,
 				74D611D428B95A1000607D12 /* AppDelegate.swift */,
 				74D611D628B95A1000607D12 /* SceneDelegate.swift */,
 				74D611DA28B95A1000607D12 /* Main.storyboard */,
@@ -136,7 +142,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				74D611D528B95A1000607D12 /* AppDelegate.swift in Sources */,
+				74D611EB28BABB9900607D12 /* CalculatorViewController.swift in Sources */,
 				74D611D728B95A1000607D12 /* SceneDelegate.swift in Sources */,
+				74D611ED28BABD5500607D12 /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
